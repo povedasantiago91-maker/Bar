@@ -1,0 +1,75 @@
+.products-contenido {
+  display: flex;
+  flex-direction: column;   /* Apila el contenido verticalmente */
+  justify-content: center;  /* Centra verticalmente */
+  align-items: center;      /* Centra horizontalmente */
+  text-align: center;       /* Centra el texto dentro */
+  height: 100vh;            /* Ocupa toda la altura de la pantalla */
+  padding: 20px;            /* Espacio interno */
+}
+
+.products-contenido h1 {
+  font-size: 2.5rem;
+  margin-bottom: 500px;
+}
+
+
+
+.producto {
+  display: flex;
+  align-items: center;
+  background-color: #fde5e560;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  gap: 30px;
+  color: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(1, 194, 117, 0.3);
+}
+
+.producto img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  max-width: 600px;
+}
+
+.info h3 {
+  color: #410000;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info p {
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 📱 Diseño adaptable a celulares */
+@media (max-width: 768px) {
+  .producto {
+    flex-direction: column; /* Imagen arriba y texto abajo en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+}

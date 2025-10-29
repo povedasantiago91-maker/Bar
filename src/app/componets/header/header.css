@@ -1,0 +1,7 @@
+.navbar {
+  background-color: #3f0000; /* Verde */
+}
+
+.navbar a {
+  color: white !important;
+}

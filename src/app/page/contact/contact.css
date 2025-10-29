@@ -1,0 +1,79 @@
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5ebe6;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal */
+.contacto-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Imagen encima del formulario */
+.contacto-img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Título y descripción */
+.contacto h2 {
+  font-size: 2rem;
+  color: #7b3e19;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  color: #5a3b2e;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Estilos del formulario */
+.contacto-form .form-label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  color: #3b1f1f;
+  margin-bottom: 5px;
+}
+
+.contacto-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9a99a;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.contacto-form .form-control:focus {
+  border-color: #7b3e19;
+  outline: none;
+}
+
+/* Botón de enviar */
+.btn-enviar {
+  background-color: #7b3e19;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #9b5630;
+}
