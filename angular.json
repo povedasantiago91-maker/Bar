@@ -47,7 +47,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "https://povedasantiago91.github.io/Bar"
+              "baseHref": "/Bar/"
             },
             "development": {
               "optimization": false,
