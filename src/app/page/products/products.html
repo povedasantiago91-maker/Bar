@@ -1,11 +1,21 @@
 <section class="productos">
-  <div class="producto">
-    <img src="/img/margarita_clasica.jpg" alt="Cóctel Fresh">
-    
+  @for (producto of productos; track producto.id){
+  <article class="producto">
+    <img [src]="producto.imagen" [alt]="producto.nombre">
+    <h3>{{ producto.nombre }}</h3>
+    <p>{{ producto.descripcion }}</p>
+    <strong>{{ producto.precio | currency:'COP':'symbol':'1.0-0' }}</strong>
+  </article>
+  }
+  <div class="productos">
+
+    <img src="/img/margarita_clasica.jpg" alt="margarita clasica">
+
     <div class="info">
       <h3>Margarita Clasica</h3>
-      <p>Refrescante y equilibrado cóctel mexicano elaborado con tequila, licor de naranja y jugo de lima fresco,
-        servido con sal en el borde del vaso</p>
+      <p>Una combinación perfecta de frescura y carácter. Tequila, licor de naranja y jugo de lima recién exprimido se
+        mezclan para crear un cóctel equilibrado, cítrico y ligeramente dulce, servido con su icónico borde de sal.
+        Refrescante y elegante, la Margarita Clásica es un homenaje al espíritu mexicano.</p>
     </div>
   </div>
 

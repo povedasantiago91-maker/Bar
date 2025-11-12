@@ -1,12 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Productos } from '../../servicios/products';
 
 @Component({
   selector: 'app-products',
-  imports: [RouterModule],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './products.html',
-  styleUrl: './products.css'
+  styleUrls: ['./products.css']
 })
 export class Products {
+  productos: any[] = [];
 
+  constructor(private productService: Productos) {
+    this.productos = this.productService.getProductos();
+  }
 }
