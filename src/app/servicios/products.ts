@@ -18,7 +18,7 @@ export class Productos {
       nombre: 'Margarita Clásica',
       descripcion: 'Una combinación perfecta de frescura y carácter. Tequila, licor de naranja y jugo de lima recién exprimido se mezclan para crear un cóctel equilibrado, cítrico y ligeramente dulce, servido con su icónico borde de sal. Refrescante y elegante.',
       precio: 35000,
-      imagen: 'assets/img/margarita_clasica.webp',
+      imagen: "",
     },
     {
       id: 2,
