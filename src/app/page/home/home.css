@@ -6,7 +6,7 @@
   justify-content: center;  /* Centra verticalmente */
   align-items: center;      /* Centra horizontalmente */
   text-align: center;       /* Centra el texto dentro */
-  height: 100vh;            /* Ocupa toda la altura de la pantalla */
+  min-height: 100vh;            /* Ocupa toda la altura de la pantalla */
   padding: 20px;            /* Espacio interno */
 }
 
@@ -16,7 +16,7 @@
 }
 
 .home-contenido p {
-  max-width: 600px;         /* Para que no se extienda demasiado */
+  max-width: center;         /* Para que no se extienda demasiado */
   line-height: 1.8;         /* Mejora la legibilidad */
   margin-bottom: 20px;
 }

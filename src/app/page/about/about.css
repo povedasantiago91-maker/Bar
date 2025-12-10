@@ -15,7 +15,7 @@
 }
 
 .about-contenido p {
-  max-width: 600px;         /* Para que no se extienda demasiado */
+  max-width: center;         /* Para que no se extienda demasiado */
   line-height: 1.8;         /* Mejora la legibilidad */
   margin-bottom: 20px;
 }

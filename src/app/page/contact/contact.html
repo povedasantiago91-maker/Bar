@@ -4,30 +4,69 @@
     <h2>Contáctanos</h2>
     <p>¿Tienes alguna pregunta o deseas más información sobre nuestros cócteles? ¡Envíanos un mensaje!</p>
 
-    <form class="contacto-form">
+    <form [formGroup]="contactForm" (ngSubmit)="enviar()" novalidate>
+
+      <!-- EMAIL -->
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+        <label for="email" class="form-label">Correo electrónico</label>
+
         <input
+          id="email"
           type="email"
           class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-          required
-        >
+          formControlName="email"
+          [class.is-invalid]="f['email'].touched && f['email'].invalid"
+        />
+
+        <!-- ERRORES EMAIL -->
+        <div class="invalid-feedback" *ngIf="f['email'].touched && f['email'].errors">
+
+         <div *ngIf="f['email'].errors && f['email'].errors['required']">
+            El correo es obligatorio.
+          </div>
+
+          <div *ngIf="f['email'].errors && f['email'].errors['required']">
+            Debe ser un correo válido.
+          </div>
+
+        </div>
       </div>
 
+      <!-- MENSAJE -->
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+        <label for="mensaje" class="form-label">Mensaje</label>
+
         <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
+          id="mensaje"
           rows="4"
-          placeholder="Escribe tu mensaje aquí..."
-          required
+          class="form-control"
+          formControlName="mensaje"
+          [class.is-invalid]="f['mensaje'].touched && f['mensaje'].invalid"
         ></textarea>
+
+        <!-- ERRORES MENSAJE -->
+        <div class="invalid-feedback" *ngIf="f['mensaje'].touched && f['mensaje'].errors">
+
+          <div *ngIf="f['email'].errors && f['email'].errors['required']">
+            El mensaje es obligatorio.
+          </div>
+
+          <div *ngIf="f['mensaje'].errors['minlength']">
+          Mínimo {{ f['mensaje'].errors['minlength'].requiredLength }} caracteres.
+          </div>
+          </div>
       </div>
 
       <button type="submit" class="btn-enviar">Enviar</button>
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="cancelar()">
+        Cancelar
+      </button>
+
+
     </form>
   </div>
 </section>
